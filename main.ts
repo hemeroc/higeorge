@@ -5,7 +5,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (isAnimationRunning == false) {
-        music.play(music.melodyPlayable(music.wawawawaa), music.PlaybackMode.InBackground)
+        music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.InBackground)
         animation.runMovementAnimation(
         georgeText,
         animation.animationPresets(animation.bobbing),
@@ -20,6 +20,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         )
         isAnimationRunning = true
     } else {
+        music.stopAllSounds()
         music.play(music.melodyPlayable(music.smallCrash), music.PlaybackMode.InBackground)
         resetLogoAndText()
     }
@@ -41,6 +42,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         )
         isAnimationRunning = true
     } else {
+        music.stopAllSounds()
         music.play(music.melodyPlayable(music.smallCrash), music.PlaybackMode.InBackground)
         resetLogoAndText()
     }
@@ -92,7 +94,6 @@ georgeText = textsprite.create("Hi, I'm George.")
 georgeText.setMaxFontHeight(0)
 georgeText.left = 55
 georgeText.top = 40
-music.play(music.stringPlayable("E D G F B A C5 B ", 120), music.PlaybackMode.LoopingInBackground)
 game.onUpdateInterval(1000, function () {
     if (colorCycle != 0) {
         changeColor(colorCycle)
