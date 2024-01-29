@@ -1,0 +1,28 @@
+{
+    "nextPaletteID": 1,
+    "palettes": {
+        "custom0": {
+            "id": "custom0",
+            "name": "George",
+            "colors": [
+                "#000000",
+                "#FFFFFF",
+                "#004F6F",
+                "#0072F0",
+                "#009D9E",
+                "#007D59",
+                "#00AC33",
+                "#FF4F00",
+                "#FF3E6C",
+                "#FFFFFF",
+                "#FFFFFF",
+                "#FFFFFF",
+                "#5C406c",
+                "#E5CDC4",
+                "#91463d",
+                "#000000"
+            ],
+            "custom": true
+        }
+    }
+}
